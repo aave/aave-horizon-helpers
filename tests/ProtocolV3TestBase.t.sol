@@ -101,6 +101,7 @@ contract ProtocolV3TestE2ETestMetisAll is ProtocolV3TestBase {
 
 contract ProtocolV3TestE2ETestAvalancheAll is ProtocolV3TestBase {
   function setUp() public {
+    vm.skip(true, 'Not relevant for Horizon');
     vm.createSelectFork('avalanche', 66702537);
   }
 
